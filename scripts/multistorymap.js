@@ -1,51 +1,23 @@
-$(window).on('load', function() {
+var initStorymap = function(optionsPath, chaptersPath) {
+
   var documentSettings = {};
 
   // Some constants, such as default settings
   const CHAPTER_ZOOM = 15;
 
-  // First, try reading Options.csv
-  $.get('csv/Options.csv', function(options) {
+  // Read data from CSV files
+  $.get(optionsPath, function(options) {
 
-    $.get('csv/Chapters.csv', function(chapters) {
+    $.get(chaptersPath, function(chapters) {
       initMap(
         $.csv.toObjects(options),
         $.csv.toObjects(chapters)
       )
-    }).fail(function(e) { alert('Found Options.csv, but could not read Chapters.csv') });
+    }).fail(function(e) { alert('Could not read chapters CSV.') });
 
-  // If not available, try from the Google Sheet
   }).fail(function(e) {
-
-    var parse = function(res) {
-      return Papa.parse(Papa.unparse(res[0].values), {header: true} ).data;
-    }
-  
-    // First, try reading data from the Google Sheet
-    if (typeof googleDocURL !== 'undefined' && googleDocURL) {
-  
-      if (typeof googleApiKey !== 'undefined' && googleApiKey) {
-  
-        var apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/'
-        var spreadsheetId = googleDocURL.split('/d/')[1].split('/')[0];
-  
-        $.when(
-          $.getJSON(apiUrl + spreadsheetId + '/values/Options?key=' + googleApiKey),
-          $.getJSON(apiUrl + spreadsheetId + '/values/Chapters?key=' + googleApiKey),
-        ).then(function(options, chapters) {
-          initMap(parse(options), parse(chapters))
-        })
-  
-      } else {
-        alert('You load data from a Google Sheet, you need to add a free Google API key')
-      }
-
-    } else {
-      alert('You need to specify a valid Google Sheet (googleDocURL)')
-    }
-  
-  })
-
+    alert('Could not read options CSV.')
+  });
 
 
   /**
@@ -489,4 +461,4 @@ $(window).on('load', function() {
     $('.leaflet-control-attribution')[0].innerHTML = credit + attributionHTML;
   }
 
-});
+}
