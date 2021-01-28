@@ -255,7 +255,7 @@ var initStorymap = function(optionsPath, chaptersPath) {
       }
 
       for (var i = 0; i < pixelsAbove.length - 1; i++) {
-        
+
         if ( currentPosition >= pixelsAbove[i]
           && currentPosition < (pixelsAbove[i+1] - 2 * chapterContainerMargin)
           && currentlyInFocus != i
@@ -422,7 +422,7 @@ var initStorymap = function(optionsPath, chaptersPath) {
       var gaScript = document.createElement('script');
       gaScript.setAttribute('src','https://www.googletagmanager.com/gtag/js?id=' + ga);
       document.head.appendChild(gaScript);
-  
+
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -438,11 +438,12 @@ var initStorymap = function(optionsPath, chaptersPath) {
    */
   function changeAttribution() {
     var attributionHTML = $('.leaflet-control-attribution')[0].innerHTML;
-    var credit = 'View <a href="'
-      // Show Google Sheet URL if the variable exists and is not empty, otherwise link to Chapters.csv
-      + (typeof googleDocURL !== 'undefined' && googleDocURL ? googleDocURL : './csv/Chapters.csv')
-      + '" target="_blank">data</a>';
-    
+    // var credit = 'View <a href="'
+    //   // Show Google Sheet URL if the variable exists and is not empty, otherwise link to Chapters.csv
+    //   + (typeof googleDocURL !== 'undefined' && googleDocURL ? googleDocURL : './csv/Chapters.csv')
+    //   + '" target="_blank">data</a>';
+    var credit ='';
+
     var name = getSetting('_authorName');
     var url = getSetting('_authorURL');
 
