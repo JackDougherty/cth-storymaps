@@ -15,6 +15,7 @@ Leaflet Storymaps customized for CT Humanities with multi-map setup using upload
 - choose a keyword for each new storymap (such as *architecture* or *ridgefield-business*)
 - in `media` folder, create subfolder with keyword name (such as `architecture`), and upload images (JPG or PNG) or other media
 - design your storymap based on your copy of the Leaflet Storymaps with Google Sheets template https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/edit#gid=0
+- in the spreadsheet template, make sure that pathnames to media files follow the format above, such as `media/architecture/image.jpg`
 - in Google Sheets, File > Download as CSV, *carefully* rename to keyword-options.csv and keyword-chapters.csv *with no internal spaces*, then upload to `csv` folder
 - in project folder, create duplicate of existing storymap file (such as `architecture.html`), rename to keyword.html, and modify pathnames to CSV files above
 - add new link to your keyword.html storymap file in the `index.html` file
