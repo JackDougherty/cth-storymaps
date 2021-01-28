@@ -453,7 +453,7 @@ var initStorymap = function(optionsPath, chaptersPath) {
     } else if (name) {
       credit += ' by ' + name + ' | ';
     } else {
-      credit += ' | ';
+      credit += '';
     }
 
     credit += 'View <a href="' + getSetting('_githubRepo') + '">code</a>';
