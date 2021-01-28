@@ -261,8 +261,8 @@ var initStorymap = function(optionsPath, chaptersPath) {
           && currentlyInFocus != i
         ) {
 
-          // Update URL hash
-          location.hash = i + 2;
+          // Update URL hash, modified to +1 for CTH format
+          location.hash = i + 1;
 
           // Remove styling for the old in-focus chapter and
           // add it to the new active chapter
