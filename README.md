@@ -20,6 +20,8 @@ Leaflet Storymaps customized for CT Humanities with multi-map setup using upload
 
 One advantage of creating a *linked* copy from Jack's GitHub repository is that in the future, if you wish to contract him to do more work, he can edit content in his repository and *push* changes to your repository, which you can accept (or reject) with a button.
 
+PS: Also, follow same steps to make a linked copy of: https://github.com/jackdougherty/cth-storymaps-practice and your version will be named: https://github.com/cthumanities/cth-storymaps-practice
+
 ## Organization of contents
 - README.md -- this page of instructions
 - `index.html` -- list of links to the 13 storymaps, plus a sample embedded iframe
@@ -48,13 +50,13 @@ Do not use Google Sheets, since all existing data is stored in CSV format in thi
 1. Download a copy of all content to your local computer
 2. In the `csv` folder, use any spreadsheet tool to open the `architecture-chapters.csv` to edit map content, or `architecture-options.csv` to edit map settings.
 3. Re-save the sheet in CSV format with the same name.
-4. Log into your GitHub repository, and upload to the CSV folder 
+4. Log into your GitHub repository, and upload to the CSV folder
 
 
 ## To Create a New Storymap
+- Create new storymaps in your cth-practice repository
 - choose a short and unique keyword for each new storymap (such as *architecture* or *ridgefield-business*)
 - in `media` folder, create subfolder with keyword name (such as `architecture`), and upload images (JPG or PNG) or other media
-- design your storymap based on your copy of the Leaflet Storymaps with Google Sheets template https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/edit#gid=0
 - in the spreadsheet template, make sure that pathnames to media files follow the format above, such as `media/architecture/image.jpg`
 - in Google Sheets, File > Download as CSV, *carefully* rename to keyword-options.csv and keyword-chapters.csv *with no internal spaces*, then upload to `csv` folder
 - in project folder, create duplicate of existing storymap file (such as `architecture.html`), rename to keyword.html, and modify pathnames to the CSV files in this section of the code:
