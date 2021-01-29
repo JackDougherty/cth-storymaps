@@ -45,9 +45,11 @@ Ask me if you want to see a demo or discuss related options.
 ## To Edit an Existing Storymap
 Do not use Google Sheets, since all existing data is stored in CSV format in this folder.
 
-
 1. Download a copy of all content to your local computer
-2. In the `csv` folder, use any spreadsheet tool to open the `architecture-chapters.csv` to edit map content, or `architecture-options.csv` to edit map settings
+2. In the `csv` folder, use any spreadsheet tool to open the `architecture-chapters.csv` to edit map content, or `architecture-options.csv` to edit map settings.
+3. Re-save the sheet in CSV format with the same name.
+4. Log into your GitHub repository, and upload to the CSV folder 
+
 
 ## To Create a New Storymap
 - choose a short and unique keyword for each new storymap (such as *architecture* or *ridgefield-business*)
