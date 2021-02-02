@@ -345,7 +345,7 @@ var initStorymap = function(optionsPath, chaptersPath) {
             var zoom = c['Zoom'] ? c['Zoom'] : CHAPTER_ZOOM;
             map.flyTo([c['Latitude'], c['Longitude']], zoom, {
               animate: true,
-              duration: 5, // slow animation
+              duration: 4, // default is 2 seconds
             });
           }
 
