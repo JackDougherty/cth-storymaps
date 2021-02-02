@@ -343,7 +343,10 @@ var initStorymap = function(optionsPath, chaptersPath) {
           // Fly to the new marker destination if latitude and longitude exist
           if (c['Latitude'] && c['Longitude']) {
             var zoom = c['Zoom'] ? c['Zoom'] : CHAPTER_ZOOM;
-            map.flyTo([c['Latitude'], c['Longitude']], zoom);
+            map.flyTo([c['Latitude'], c['Longitude']], zoom, {
+              animate: true,
+              duration: 5, // slow animation
+            });
           }
 
           // No need to iterate through the following chapters
